@@ -9,6 +9,23 @@ Off-White #f6f6f6
 
 
 Pretty colour for later purposes - #c5a1d3
+
+
+Site Fonts 
+Caveat 
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+
+
+Open Sans 
+  font-family: "Open Sans", sans-serif;   
+  font-optical-sizing: auto;
+  font-weight: <weight>; ( Pixels, percent, bold, light ) 
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 */ 
 
 
@@ -16,10 +33,17 @@ Pretty colour for later purposes - #c5a1d3
 /* GLOBAL STYLES */
 /*---------------*/
 
+/* IMPORT GOOGLE FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+
 /* Credits to https://www.pauliriish.com/2012/box-sizing-border-box-ftw/ ! */
 
 html { 
     box-sizing: border-box;
+    font-size: 62.5%;
 }
 
 *, *:before, *:after {
@@ -33,6 +57,28 @@ html, body {
 body {
     background: #f6f6f6;
     margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+h1, h2, h3 { 
+   font-family: "Caveat", cursive;
+   font-weight: 400;
+   margin: 0;
+}
+
+h1 {
+    font-size: 7rem;
+    line-height: 0.85;
+}
+
+h2 {
+   font-size:3.6rem;
+}
+
+h3 { 
+    font-size: 2.4rem;
 }
 
 /* Links */
@@ -57,6 +103,14 @@ footer a:hover {
     background:#3c8453;
     color: #f6f6f6;
     text-decoration: none;
+    margin-bottom: 30px 0px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: 7px;
+    letter-spacing: .1em;
+    line-height: 1;
+    border-radius: 14px;
 }
 
 .content-wrapper {
@@ -95,6 +149,7 @@ footer a:hover {
     content: "";
     display: block;
     height: 375px;
+    font-family: ;
 }
 
 .resume-section {
@@ -109,11 +164,12 @@ footer a:hover {
     position: fixed;
     top: 5px;
     left: 5px;
+    font-size: 1em;
 }
 
 
 
-/* Profile 
+/*  Profile 
 --------------------*/
 
 
@@ -125,24 +181,41 @@ footer a:hover {
 ---------------------*/
 
 .project-item {
-    display:flow-root;
-    margin: 30px 0;
+    display:grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 30px;
+    /* margin: 30px 0; */
+    row-gap: 30px;
 }
 
 .project-item img {
-    width: 300px;
-    float: left;
-    margin-right: 20px;
+    width: 280px;
+    /* float: left;
+    margin-right: 20px; */
 }
 
 
+.project-details p:first-child{
+    margin-top: 0;
+}
 
 
 /* Work Experience 
 ---------------------*/
 
+.work-item { 
+    display:grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 20px;
+}
 
+/* .work-details p{ 
+    margin: 0;
+} */
 
+.work-summary p:first-child{
+    margin-top: 0;
+}
 
 
 /* Education 
