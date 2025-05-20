@@ -26,6 +26,12 @@ Open Sans
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
+
+ .poetsen-one-regular {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 */ 
 
 
@@ -35,8 +41,7 @@ Open Sans
 
 /* IMPORT GOOGLE FONTS */
 
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poetsen+One&display=swap');
 
 
 /* Credits to https://www.pauliriish.com/2012/box-sizing-border-box-ftw/ ! */
@@ -55,7 +60,7 @@ html, body {
 }
 
 body {
-    background: #f6f6f6;
+    background: #a9b4d1;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.5rem;
@@ -63,9 +68,10 @@ body {
 }
 
 h1, h2, h3 { 
-   font-family: "Caveat", cursive;
+   font-family: "Poetsen One", sans-serif;
    font-weight: 400;
    margin: 0;
+   color:rgb(48, 58, 69);
 }
 
 h1 {
@@ -81,27 +87,37 @@ h3 {
     font-size: 2.4rem;
 }
 
+p { 
+    color: #314662;
+    font-weight: bold;
+}
 /* Links */
 a { 
-    color: #3c8453;
+    color: #3c3298;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
 }
 
 a:hover { 
-    color:#bcaa96;
+    color:#c0eaf5;
     text-decoration: none;
 }
 /*-----------------*/
 footer a { 
-   color: #bcaa96;
+    color:#7580ae;
 }
-/*-----------------*/
+/*-----------------*/ 
+
 footer a:hover { 
-    color: #3c8453;
+    color:#c0eaf5;
 }
 
+
 .btn {
-    background:#3c8453;
-    color: #f6f6f6;
+    font-family: "Caveat", cursive;
+    font-weight:bold;
+    background:#75648e;
+    color: #f4e8d0;
     text-decoration: none;
     margin-bottom: 30px 0px;
     text-transform: uppercase;
@@ -123,7 +139,7 @@ footer a:hover {
 /* HOME STYLES */
 /*---------------*/
 .home {
-    background: url(../images/bg-home-office-studio.jpg) no-repeat;
+    /* background: url(../images/bg-home-office-studio.jpg) no-repeat; */
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -133,6 +149,11 @@ footer a:hover {
 .home .content-wrapper { 
     flex: 1 0 auto;
 }
+
+.content-wrapper a:hover {
+    color:#75a7e9;
+}
+
 
 .content-bg {
     background: rgb(255 255 255 / 0.9);
@@ -153,7 +174,8 @@ footer a:hover {
 /*---------------*/
 
 .resume header::before {
-    background: url(/images/bg-home-office-studio.jpg) center;
+    /* background: url(/images/bg-home-office-studio.jpg) center; */
+    background-color: #282d3e;
     background-size: cover;
     content: "";
     display: block;
@@ -166,7 +188,7 @@ footer a:hover {
 }
 
 .resume-section h2 {
-    border-bottom: 2px dashed #d3d4d6;
+    border-bottom: 5px dashed #ebc08f;
 }
 
 .download-link {
@@ -287,13 +309,21 @@ footer a:hover {
 
 .education-item {
     margin: 30px 0;
+    background-color: #b3c2df;
+    border-radius: 15px;
+    border:4px solid #314662;
+    padding: 10px;
 }
 
 
 .education-item p {
     margin:0;
+    color: #314662;
 }
 
+.education-item ul li {
+    color: #405c82;
+}
 
 
 /* Certifications 
@@ -304,8 +334,8 @@ footer a:hover {
 /* FOOTER STYLES */
 /*---------------*/
 footer {
-    color: #d3d4d6;
-    background-color: #222222;
+    color: #dbe1ed;
+    background-color: #23222d;
     display: flex;
     justify-content: space-between;
     padding: 0 20px
